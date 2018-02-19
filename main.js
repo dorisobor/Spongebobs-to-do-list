@@ -2,17 +2,15 @@
 const button = document
   .getElementById("button");
 
-// refresh list
+// get the id from the refresh button 
 const refresh = document
   .getElementById("refresh");
 
 
-
 //creates a function to the button so that you can submit the task
-
 button.addEventListener("click", function () {
 
-  /* get gets the variable x that is the
+  /*  gets the variable x that is the
    id of text input. The value will be the 
    text we put in the field */
   var x = document.getElementById("todoText").value;
@@ -29,7 +27,7 @@ button.addEventListener("click", function () {
 });
 
 
-// refresh a todod
+// refresh function for the list
 refresh.addEventListener('click', function () {
   var list = document.getElementsByTagName("p");
 
@@ -39,4 +37,3 @@ refresh.addEventListener('click', function () {
 
 
 });
-
