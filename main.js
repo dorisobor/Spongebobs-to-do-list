@@ -6,6 +6,11 @@ const buttonAdd = document
 const refresh = document
   .getElementById("refresh");
 
+// gets the id from the ul tag 
+const todoList = document
+  .getElementById("todoList");
+
+
 //creates a function to the button so that you can submit the task
 buttonAdd.addEventListener("click", function () {
 
@@ -30,29 +35,44 @@ buttonAdd.addEventListener("click", function () {
   deleteImage.setAttribute("width", "25");
   deleteImage.classList.add("deleteImage");
 
-
+  // check button
+  const checkImage = document
+    .createElement("img");
+  // sets css attributes to the img
+  checkImage.setAttribute("src", "images/check.png");
+  checkImage.setAttribute("height", "25");
+  checkImage.setAttribute("width", "25");
+  checkImage.classList.add("checkImage");
 
 
   //gets the value from the field and adds it to the list
   todoTask.innerHTML = x;
-  document.getElementById('todoList').appendChild(todoTask);
+  document.getElementById("todoList").appendChild(todoTask);
   todoTask.appendChild(deleteImage);
+  todoTask.appendChild(checkImage);
 
+ /* gets the latest li before the first child element of ul 
+   which means the new task will end up first in the list*/
+  todoList.insertBefore(todoTask, todoList.childNodes[0]);
+
+
+  
 });
+  
 
-
-// refresh function for the list
+  // refresh function for the list
 refresh.addEventListener('click', function () {
-  var list = document.getElementsByTagName("li");
+  const list = document.getElementsByTagName("li");
 
   for (var i = 0; i < list.length; i += 0) {
     list[i].remove();
   }
 
-
 });
 
 
 
+
+    
 
 
