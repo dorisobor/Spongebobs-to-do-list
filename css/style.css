@@ -1,53 +1,63 @@
 body {
-    margin: 0px;
-    padding: 0px;
-    background-image: url("../images/todo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+	margin: 0px;
+	padding: 0px;
+	background-image: url("../images/todo.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 /*Spongebob image*/
 
 .spongebob {
-    width: 360px;
-    height: 300px;
-    position: fixed;
-    bottom: 0px;
-    right: 75%;
+	width: 360px;
+	height: 300px;
+	position: fixed;
+	bottom: 0px;
+	right: 75%;
 }
 
 input {
-    outline: 0;
-    border-width: 0 0 2px 0;
-    border-color: black;
-    background-color: transparent;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 1.5em;
+	outline: 0;
+	border-width: 0 0 2px 0;
+	border-color: black;
+	background-color: transparent;
+	font-family: 'Patrick Hand', cursive;
+	font-size: 1.5em;
 }
 
 #buttonAdd,
 #refresh {
-    font-family: 'Patrick Hand', cursive;
-    background-color: blueviolet;
-    color: blanchedalmond;
-    font-size: 1.5em;
-    border-radius: 12px;
+	font-family: 'Patrick Hand', cursive;
+	background-color: blueviolet;
+	color: blanchedalmond;
+	font-size: 1.5em;
+	border-radius: 12px;
+
 }
+
 
 /*The div*/
 
 #todos {
-    position: fixed;
-    top: 300px;
-    right: 25%;
+	position: fixed;
+	top: 300px;
+	right: 25%;
 }
 
 /*the tasks*/
 
 .todoTask {
-    text-align: center;
-    vertical-align: bottom;
-    font-family: 'Patrick Hand', cursive;
-    font-size: 2em;
-    list-style-type: none;
+	text-align: center;
+	vertical-align: bottom;
+	font-family: 'Patrick Hand', cursive;
+	font-size: 2em;
+	list-style-type: none;
+}
+
+.deleteImage {
+	margin:5px;
+	padding:5px 5px 5px;
+	height: 25px;
+	width: 25px;
+	
 }
