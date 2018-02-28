@@ -7,10 +7,9 @@ body {
 }
 
 /*Spongebob image*/
-
 .spongebob {
-	width: 360px;
-	height: 300px;
+	max-width: 360px;
+	max-height: 300px;
 	position: fixed;
 	bottom: 0px;
 	right: 75%;
@@ -25,39 +24,92 @@ input {
 	font-size: 1.5em;
 }
 
-#buttonAdd,
-#refresh {
+#buttonAdd, #refresh {
 	font-family: 'Patrick Hand', cursive;
 	background-color: blueviolet;
 	color: blanchedalmond;
 	font-size: 1.5em;
 	border-radius: 12px;
-
 }
 
-
-/*The div*/
-
+/*the todo list*/
 #todos {
-	position: fixed;
-	top: 300px;
-	right: 25%;
+	position: relative;
+	top:300px;
+	margin: 0 auto;
+	width:30%;
+	left:170px;
+}
+
+/*finished task list*/
+#checkedItemList {
+	margin-top:70px;
+	text-align:center;
+	overflow-y: scroll;
+	width: 400px;
+	max-height: 300px;
+	border: 5px dotted black;
+	background-color: lightblue;
+}
+
+h1 {
+	font-family: 'Patrick Hand', cursive;
+	text-decoration: underline;
 }
 
 /*the tasks*/
-
 .todoTask {
 	text-align: center;
 	vertical-align: bottom;
 	font-family: 'Patrick Hand', cursive;
 	font-size: 2em;
 	list-style-type: none;
+	opacity: 0.4;
+	transition: all 900ms;
+	position: relative;
+}
+
+.deleteImage, .checkbox {
+	height: 25px;
+	width: 25px;
+	padding: 5px;
+}
+
+.deleteImage:hover {
+	opacity: 1;
 }
 
 .deleteImage {
-	margin:5px;
-	padding:5px 5px 5px;
-	height: 25px;
-	width: 25px;
-	
+	opacity: 0.7;
+}
+
+#todoList {
+	position: relative;
+	right: 20%;
+}
+
+.fadeIn {
+	opacity: 1;
+}
+
+/*Scrollbar styling*/
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+	background:whitesmoke;
+}
+
+/* handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+}
+
+/* handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
 }
